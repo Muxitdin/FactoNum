@@ -20,7 +20,7 @@ const Result = () => {
         }
 
         const fetchInfo = async () => {
-            const url = `http://numbersapi.com/${state.number}/${state.type}`;
+            const url = `/api/numbers?number=${state.number}&type=${state.type}`;
             try {
                 const { data } = await axios.get(url);
                 setInfo(data);
