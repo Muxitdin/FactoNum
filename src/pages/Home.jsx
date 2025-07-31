@@ -1,5 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Select, SelectTrigger, SelectValue, SelectItem, SelectContent } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const Home = () => {
     const [type, setType] = useState("trivia");
@@ -38,44 +45,56 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center gap-6 p-6">
-            <h1 className="text-2xl font-bold">Информация о числе</h1>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-md">
-                <label>
-                    Тип информации:
-                    <select
-                        value={type}
-                        onChange={(e) => setType(e.target.value)}
-                        className="w-full p-2 border rounded"
-                    >
-                        <option value="trivia">Trivia</option>
-                        <option value="math">Math</option>
-                        <option value="date">Date</option>
-                        <option value="year">year</option>
-                    </select>
-                </label>
+        <div className="min-h-screen flex items-center justify-center px-4 bg-muted">
+            <Card className="relative w-full max-w-md shadow-xl border">
+                <CardHeader>
+                    <CardTitle className="text-center text-2xl">Информация о числе</CardTitle>
+                </CardHeader>
+                <div className="absolute top-4 right-4">
+                    <ThemeToggle />
+                </div>
 
-                <label>
-                    <input type="checkbox" checked={useRandom} onChange={() => setUseRandom(!useRandom)} />
-                    <span className="ml-2">Использовать случайное число</span>
-                </label>
+                <CardContent>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="space-y-2">
+                            <Label>Тип информации</Label>
+                            <Select value={type} onValueChange={setType}>
+                                <SelectTrigger>
+                                    <SelectValue placeholder="Выберите тип" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectItem value="trivia">Trivia</SelectItem>
+                                    <SelectItem value="math">Math</SelectItem>
+                                    <SelectItem value="date">Date</SelectItem>
+                                    <SelectItem value="year">Year</SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </div>
 
-                {!useRandom && (
-                    <input
-                        type="text"
-                        value={number}
-                        onChange={(e) => setNumber(e.target.value)}
-                        placeholder="Введите число"
-                        className="p-2 border rounded"
-                    />
-                )}
+                        <div className="flex items-center space-x-2">
+                            <Checkbox id="random" checked={useRandom} onCheckedChange={(val) => setUseRandom(val)} />
+                            <Label htmlFor="random">Использовать случайное число</Label>
+                        </div>
 
-                {error && <p className="text-red-500">{error}</p>}
+                        {!useRandom && (
+                            <div className="space-y-2">
+                                <Label>{type === "date" ? "Дата (MM/DD)" : "Число"}</Label>
+                                <Input
+                                    value={number}
+                                    onChange={(e) => setNumber(e.target.value)}
+                                    placeholder={type === "date" ? "Пример: 2/29 или 04/01" : "Введите число"}
+                                />
+                            </div>
+                        )}
 
-                <button type="submit" className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
-                    Получить информацию
-                </button>
-            </form>
+                        {error && <p className="text-sm text-red-500 font-medium">{error}</p>}
+
+                        <Button type="submit" className="w-full">
+                            Получить информацию
+                        </Button>
+                    </form>
+                </CardContent>
+            </Card>
         </div>
     );
 };
