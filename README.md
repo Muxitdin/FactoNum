@@ -1,6 +1,6 @@
 ## 🎬 Видео демонстрация
 
-👉 [Посмотреть видео.mp4](https://github-production-user-asset-6210df.s3.amazonaws.com/93820902/472963925-e4fd6593-f500-4466-9a43-26e2b562fca3.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250731%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250731T112932Z&X-Amz-Expires=300&X-Amz-Signature=ad13c5012873a55a954cfe8933d2d7fa25f9a4a307622ab955e098a72a369d17&X-Amz-SignedHeaders=host)
+👉 [Посмотреть видео.mp4](https://private-user-images.githubusercontent.com/93820902/473308355-674ce89d-55c0-4bef-8012-17a846228991.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQwMjg2NDUsIm5iZiI6MTc1NDAyODM0NSwicGF0aCI6Ii85MzgyMDkwMi80NzMzMDgzNTUtNjc0Y2U4OWQtNTVjMC00YmVmLTgwMTItMTdhODQ2MjI4OTkxLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODAxVDA2MDU0NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjODc3N2NjZWRhMDQ4ZmRkMjY2ZmI5ZmUyODVjNjI0NTFmMGFmNWYwZDNlODI5OWE3MmQxNmIwMjllYTg2YjgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.6-iV6cbtNjZ7kpQVpgDK_Hlk07CmIHWfBFFVfCs6H5g)
 
 
 ## 🔗 Live Demo
